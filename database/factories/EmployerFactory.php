@@ -17,9 +17,23 @@ class EmployerFactory extends Factory
      */
     public function definition(): array
     {
+        $logos = [
+            'logos/seed-1.jpeg',
+            'logos/seed-2.jpeg',
+            'logos/seed-3.jpeg',
+            'logos/seed-4.jpeg',
+            'logos/seed-5.jpeg',
+            'logos/seed-6.jpeg',
+            'logos/seed-7.jpeg',
+            'logos/seed-8.png',
+            'logos/seed-9.jpeg',
+            'logos/seed-10.jpeg',
+            'logos/seed-11.jpeg',
+        ];
+
         return [
             'name' => fake()->name(),
-            'logo' => fake()->imageUrl(),
+            'logo' => $logos[array_rand($logos)],
             'user_id' => User::factory(),
         ];
     }
