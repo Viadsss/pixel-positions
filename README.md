@@ -4,6 +4,8 @@ A modern, minimal job board application built with **Laravel 11**, inspired by t
 
 ![Pixel Positions Screenshot](/screenshots/Landing%20Page.png)
 
+![Demo Video](https://www.youtube.com/watch?v=oscJvXW_pYY)
+
 ## ✨ Features
 
 -   User registration and authentication
