@@ -1,20 +1,17 @@
 <?php
 
-namespace Database\Factories;
+namespace Database\Seeders;
 
-use Illuminate\Database\Eloquent\Factories\Factory;
+use App\Models\Tag;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Illuminate\Database\Seeder;
 
-/**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Tag>
- */
-class TagFactory extends Factory
+class TagSeeder extends Seeder
 {
     /**
-     * Define the model's default state.
-     *
-     * @return array<string, mixed>
+     * Run the database seeds.
      */
-    public function definition(): array
+    public function run(): void
     {
         $jobTags = [
             'Engineering',
@@ -34,8 +31,8 @@ class TagFactory extends Factory
             'QA Testing',
         ];
 
-        return [
-            'name' => fake()->unique()->randomElement($jobTags),
-        ];
+        foreach ($jobTags as $tagName) {
+            Tag::firstOrCreate(['name' => $tagName]);
+        }
     }
 }
