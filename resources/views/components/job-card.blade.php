@@ -10,8 +10,8 @@
         <p class="text-sm mt-4">{{ $job->salary }}</p>
     </div>
 
-    <div class="flex justify-between items-center mt-auto">
-        <div>
+    <div class="flex justify-between items-center mt-auto gap-3">
+        <div class="flex items-center flex-wrap gap-2">
             @foreach ($job->tags as $tag)
                 <x-tag :$tag size="small" />
             @endforeach
